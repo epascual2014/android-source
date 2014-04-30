@@ -34,6 +34,10 @@ public class Loops extends Object {
 		 * ASSIGNMENT:
 		 * Replace the operations above with a while loop
 		 */
+		int i = 0;
+		while (i < someBools.length){
+			i++;
+		}
 
 		if (Test.testBools(someBools)) {
 			System.out.print("Your booleans are in proper order!\n");
@@ -61,6 +65,7 @@ public class Loops extends Object {
 		 * ASSIGNMENT:
 		 * Replace the operations above with a for loop
 		 */
+		for (int i = 0; i < someBools.length; i++)
 
 		if (Test.testInts(numArray)) {
 			System.out.print("And you nailed the number array!\n");
