@@ -65,7 +65,7 @@ public class Loops extends Object {
 		 * ASSIGNMENT:
 		 * Replace the operations above with a for loop
 		 */
-		for (int i = 0; i < someBools.length; i++)
+		for (i = 0; i < someBools.length; i++)
 
 		if (Test.testInts(numArray)) {
 			System.out.print("And you nailed the number array!\n");
