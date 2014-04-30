@@ -29,13 +29,13 @@ public class Operations extends Object {
 			ASSIGNMENT:
 			Mod z by 17 and assign the result to remainder
 		*/
-		float floaty = 5.0f / 3;
+		float floaty = 5.0f / 3.0f;
 		/*
 			ASSIGNMENT:
 			Assign 5 to floaty and then divide it by 3
 		*/
-		double dubs = 0;
-		dubs = 5.3d-- * dubs;
+		double dubs = 5.3d;
+		dubs = dubs-- * dubs;
 		/*
 			ASSIGNMENT:
 			Assign 5.3 into dubs
