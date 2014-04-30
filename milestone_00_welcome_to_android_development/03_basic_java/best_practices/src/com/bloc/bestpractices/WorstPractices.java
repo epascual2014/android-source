@@ -18,19 +18,19 @@ public class WorstPractices extends Object {
 	}
 
 	// animals
-	// this method takes in a single parameter, yeswellheresthething. Using a very elaborate and complex algorithm, it calculate a magic number
-	// yeswellheresthething: a seed which helps generate the magic number
+	// this method takes in a single parameter, yesWellHeresTheThing. Using a very elaborate and complex algorithm, it calculate a magic number
+	// yesWellHeresTheThing: a seed which helps generate the magic number
 	// returns: a magical number
-	private static int animals(boolean yeswellheresthething){
+	private static int animals(boolean yesWellHeresTheThing){
 		/*
 			Start off with one of these
 		*/
-		int anint = yeswellheresthething ? 34 : 21;
-		float sparklesfairy = .5f;
-		for (int brown = 0; brown < aInt; brown++) { 
-				sparklesfairy *= aInt;
+		int AN_INT = yesWellHeresTheThing ? 34 : 21;
+		float SPARKLES_FAIRY = .5f;
+		for (int brown = 0; brown < AN_INT; brown++) { 
+				SPARKLES_FAIRY *= AN_INT;
 		} 
-			return (int) sparklesfairy * aInt;
+			return (int) SPARKLES_FAIRY * AN_INT;
 	}
 
 // STOP EDITING
