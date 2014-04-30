@@ -14,7 +14,7 @@ public class Operations extends Object {
 			ASSIGNMENT:
 			Place 18 into x
 		*/
-		int y = --x;
+		int y = ++x;
 		/*
 			ASSIGNMENT:
 			Pre-increment x and assign it to y in a single statement
@@ -29,47 +29,13 @@ public class Operations extends Object {
 			ASSIGNMENT:
 			Mod z by 17 and assign the result to remainder
 		*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		float floaty = 5.0f / 3.0f;
-=======
-		float floaty = 0f;
->>>>>>> parent of 8be74de... first push for all
-=======
-		float floaty = 5.0f / 3.0f;
->>>>>>> parent of 179e4a5... try revert
-=======
-		float floaty = 0f;
->>>>>>> parent of 8be74de... first push for all
-=======
-		float floaty = 5.0f / 3.0f;
->>>>>>> parent of 0e3c364... reverting
 		/*
 			ASSIGNMENT:
 			Assign 5 to floaty and then divide it by 3
 		*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		double dubs = 5.3d;
 		dubs = dubs-- * dubs;
-=======
-		double dubs = 0d;
->>>>>>> parent of 8be74de... first push for all
-=======
-		double dubs = 5.3d;
-		dubs = dubs-- * dubs;
->>>>>>> parent of 179e4a5... try revert
-=======
-		double dubs = 0d;
->>>>>>> parent of 8be74de... first push for all
-=======
-		double dubs = 5.3d;
-		dubs = dubs-- * dubs;
->>>>>>> parent of 0e3c364... reverting
 		/*
 			ASSIGNMENT:
 			Assign 5.3 into dubs
