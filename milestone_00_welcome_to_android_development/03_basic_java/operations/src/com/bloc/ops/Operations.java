@@ -9,22 +9,22 @@ import java.io.InputStreamReader;
 public class Operations extends Object {
 
 	public static void main(String [] args) {
-		int x = 0;
+		int x = 18;
 		/*
 			ASSIGNMENT:
 			Place 18 into x
 		*/
-		int y = 0;
+		int y = --x;
 		/*
 			ASSIGNMENT:
 			Pre-increment x and assign it to y in a single statement
 		*/
-		int z = 0;
+		int z = x * y;
 		/*
 			ASSIGNMENT:
 			Multiply x by y, assign it to z
 		*/
-		int remainder = 0;
+		int remainder = z % 17;
 		/*
 			ASSIGNMENT:
 			Mod z by 17 and assign the result to remainder
@@ -32,6 +32,7 @@ public class Operations extends Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		float floaty = 5.0f / 3.0f;
 =======
 		float floaty = 0f;
@@ -42,6 +43,9 @@ public class Operations extends Object {
 =======
 		float floaty = 0f;
 >>>>>>> parent of 8be74de... first push for all
+=======
+		float floaty = 5.0f / 3.0f;
+>>>>>>> parent of 0e3c364... reverting
 		/*
 			ASSIGNMENT:
 			Assign 5 to floaty and then divide it by 3
@@ -49,6 +53,7 @@ public class Operations extends Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		double dubs = 5.3d;
 		dubs = dubs-- * dubs;
 =======
@@ -61,6 +66,10 @@ public class Operations extends Object {
 =======
 		double dubs = 0d;
 >>>>>>> parent of 8be74de... first push for all
+=======
+		double dubs = 5.3d;
+		dubs = dubs-- * dubs;
+>>>>>>> parent of 0e3c364... reverting
 		/*
 			ASSIGNMENT:
 			Assign 5.3 into dubs
