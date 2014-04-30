@@ -31,6 +31,7 @@ public class Operations extends Object {
 		*/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		float floaty = 5.0f / 3.0f;
 =======
 		float floaty = 0f;
@@ -38,10 +39,14 @@ public class Operations extends Object {
 =======
 		float floaty = 5.0f / 3.0f;
 >>>>>>> parent of 179e4a5... try revert
+=======
+		float floaty = 0f;
+>>>>>>> parent of 8be74de... first push for all
 		/*
 			ASSIGNMENT:
 			Assign 5 to floaty and then divide it by 3
 		*/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		double dubs = 5.3d;
@@ -53,6 +58,9 @@ public class Operations extends Object {
 		double dubs = 5.3d;
 		dubs = dubs-- * dubs;
 >>>>>>> parent of 179e4a5... try revert
+=======
+		double dubs = 0d;
+>>>>>>> parent of 8be74de... first push for all
 		/*
 			ASSIGNMENT:
 			Assign 5.3 into dubs

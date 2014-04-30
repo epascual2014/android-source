@@ -1,3 +1,3 @@
-## __(Edrick)__ rocks!
+## __(EDRICK)__ rocks!
 
 They're pretty much the most amazing, awesomest person that there ever is or was…
