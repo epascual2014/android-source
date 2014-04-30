@@ -30,20 +30,29 @@ public class Operations extends Object {
 			Mod z by 17 and assign the result to remainder
 		*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 		float floaty = 5.0f / 3.0f;
 =======
 		float floaty = 0f;
 >>>>>>> parent of 8be74de... first push for all
+=======
+		float floaty = 5.0f / 3.0f;
+>>>>>>> parent of 179e4a5... try revert
 		/*
 			ASSIGNMENT:
 			Assign 5 to floaty and then divide it by 3
 		*/
+<<<<<<< HEAD
 <<<<<<< HEAD
 		double dubs = 5.3d;
 		dubs = dubs-- * dubs;
 =======
 		double dubs = 0d;
 >>>>>>> parent of 8be74de... first push for all
+=======
+		double dubs = 5.3d;
+		dubs = dubs-- * dubs;
+>>>>>>> parent of 179e4a5... try revert
 		/*
 			ASSIGNMENT:
 			Assign 5.3 into dubs
