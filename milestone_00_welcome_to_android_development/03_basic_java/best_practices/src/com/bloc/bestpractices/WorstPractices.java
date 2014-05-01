@@ -21,13 +21,13 @@ public class WorstPractices extends Object {
 	// this method takes in a single parameter, yesWellHeresTheThing. Using a very elaborate and complex algorithm, it calculate a magic number
 	// yesWellHeresTheThing: a seed which helps generate the magic number
 	// returns: a magical number
-	private static int animals(boolean yesWellHeresTheThing){
+	private static int animals(boolean heresTheThing){
 		/*
 			Start off with one of these
 		*/
-		int AN_INT = yesWellHeresTheThing ? 34 : 21;
+		int AN_INT = heresTheThing ? 34 : 21;
 		float SPARKLES_FAIRY = .5f;
-		for (int brown = 0; brown < AN_INT; brown++) { 
+		for (int BROWN = 0; BROWN < AN_INT; brown++) { 
 				SPARKLES_FAIRY *= AN_INT;
 		} 
 			return (int) SPARKLES_FAIRY * AN_INT;
