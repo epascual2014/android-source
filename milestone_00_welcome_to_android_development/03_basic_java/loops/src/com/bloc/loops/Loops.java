@@ -12,7 +12,7 @@ public class Loops extends Object {
 		boolean[] someBools = {true, false, true, true, false, true, false, false};
 		boolean temp = false;
 
-		// Starts here
+		/* Starts here
 		temp = someBools[7];
 		someBools[7] = someBools[0];
 		someBools[0] = temp;
@@ -28,16 +28,21 @@ public class Loops extends Object {
 		temp = someBools[4];
 		someBools[4] = someBools[3];
 		someBools[3] = temp;
-		// Ends here
+		Ends here
 
 		/*
 		 * ASSIGNMENT:
 		 * Replace the operations above with a while loop
 		 */
+
 		int i = 0;
-		while (i < someBools.length){
+		while (i < someBools.length / 2){
+			temp = someBools[i];
+			someBools[i] = someBools[someBools.length - 1 - i];
+			someBools[someBools.length - 1 - i] = temp;
 			i++;
 		}
+		
 
 		if (Test.testBools(someBools)) {
 			System.out.print("Your booleans are in proper order!\n");
@@ -50,7 +55,7 @@ public class Loops extends Object {
 		// This is known as an in-line conditional
 		// learn more here: http://www.cafeaulait.org/course/week2/43.html
 
-		// Starts here
+		/* Starts here
 		numArray[0] = !someBools[0] ? 1 : 0;
 		numArray[1] = !someBools[1] ? 1 : 0;
 		numArray[2] = !someBools[2] ? 1 : 0;
@@ -65,7 +70,10 @@ public class Loops extends Object {
 		 * ASSIGNMENT:
 		 * Replace the operations above with a for loop
 		 */
-		for (i = 0; i < someBools.length; i++)
+		for (i = 0; i < someBools.length; i++){
+			numArray[i] = !someBools[i] ? 1 : 0;
+		}
+
 
 		if (Test.testInts(numArray)) {
 			System.out.print("And you nailed the number array!\n");
