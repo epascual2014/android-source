@@ -8,11 +8,11 @@ public class WorstPractices extends Object {
 // EDIT BELOW
 
 	public static void main(String [] args) {
-		int MAGIC_NUMBER = WorstPractices.animals(false);
-		MAGIC_NUMBER *= 5;
-		if (MAGIC_NUMBER > 18) {
-			while(MAGIC_NUMBER > 0){
-				MAGIC_NUMBER--;
+		int magicNumber = WorstPractices.animals(false);
+		magicNumber *= 5;
+		if (magicNumber > 18) {
+			while(magicNumber > 0){
+				magicNumber--;
 			}
 		}
 	}
@@ -25,12 +25,12 @@ public class WorstPractices extends Object {
 		/*
 			Start off with one of these
 		*/
-		int AN_INT = heresTheThing ? 34 : 21;
-		float SPARKLES_FAIRY = .5f;
-		for (int BROWN = 0; BROWN < AN_INT; brown++) { 
-				SPARKLES_FAIRY *= AN_INT;
+		int anInt = heresTheThing ? 34 : 21;
+		float sparklesFairy = .5f;
+		for (int brown = 0; brown < anInt; brown++) { 
+				sparklesFairy *= anInt;
 		} 
-			return (int) SPARKLES_FAIRY * AN_INT;
+			return (int) sparklesFairy * anInt;
 	}
 
 // STOP EDITING
