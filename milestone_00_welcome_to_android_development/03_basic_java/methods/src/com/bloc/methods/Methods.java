@@ -20,14 +20,18 @@ public class Methods extends Object {
 	}
 
 	public boolean giveMeTheOpposite(boolean original) {
+
 		/*
 		 * ASSIGNMENT:
 		 * Return the logical opposite of the passed parameter 'original'
 		 */
-		return false;
+		return !original;
 	}
 
 	public void flipTheSign(int[] numbers) {
+		for (int i = 0; i < numbers.length; i++){
+			numbers[i] =  -numbers[i];
+		}
 		/*
 		 * ASSIGNMENT:
 		 * For all the integers in the array, reverse their sign:
@@ -36,6 +40,11 @@ public class Methods extends Object {
 	}
 
 	public boolean[] boolsRule(int floor, int[] someNumbers) {
+		boolean[] array = new boolean [someNumbers.length]; // stored new array [what size of array]
+		for (int i = 0; i < someNumbers.length; i++){ // loop
+			array[i] = someNumbers[i] >= floor; 
+		}	
+			return array;
 		/*
 		 * ASSIGNMENT:
 		 * This method returns an array of booleans of length someNumbers.length
@@ -43,10 +52,20 @@ public class Methods extends Object {
 		 * array is at least 'floor' e.g.
 		 * {0, 5, 18, 2} with a floor of 6 returns {false, false, true, false}
 		 */
-		return new boolean [0];
 	}
 
 	public int[] getMinAndMax(int[] someNumbers) {
+		
+		int smallNumber = someNumbers[0]; // set which element in the array will be the smallest number
+		int highNumber = someNumbers[1]; // set which element in the array will be the highest number
+		for (int i = 0; i < someNumbers.length; i++) {
+			if ( someNumbers[i] >= highNumber) {
+				highNumber = someNumbers[i]; 
+			} 
+			if ( someNumbers[i] <= smallNumber) {
+					smallNumber = someNumbers[i];
+			}
+		}
 		/*
 		 * ASSIGNMENT:
 		 * This method returns an array of length 2, the 0th index should contain
@@ -54,6 +73,6 @@ public class Methods extends Object {
 		 * be the largest e.g.
 		 * {3, 6, 202, 2, 9986, 5} returns {2, 9986}
 		 */
-		return new int[2];
+		return new int[] {smallNumber, highNumber}; // return value, w/ small and high number from array
 	}
 }
