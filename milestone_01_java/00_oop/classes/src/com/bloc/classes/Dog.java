@@ -5,11 +5,11 @@ class Dog {
     final float HAIR_CUT_LENGTH = 0.15f
     // Minimum weight that any Dog can be
     final float MIN_WEIGHT = 1.25f;
-	// Amount of weight to gain after eating
-	final float WEIGHT_GAIN = 0.25f;
-	// Amount of weight to lose after playing
-	final float WEIGHT_LOSS = 0.2f;
-	// Hair length
+		// Amount of weight to gain after eating
+		final float WEIGHT_GAIN = 0.25f;
+		// Amount of weight to lose after playing
+		final float WEIGHT_LOSS = 0.2f;
+		// Hair length
 	float mHairLength;
 	// Gender, either "male" or "female"
 	String mGender;
@@ -24,12 +24,18 @@ class Dog {
 
 	// ADD MEMBER VARIABLES HERE IF NECESSARY
 
+	void getHairLength() {
+		float getHairLength = mHairLength;
+		return mHairLength;
+	}
 	/*
 	 * getHairLength
 	 * @return this Dog's hair length
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setHairLength() {
+		float setHairLength = getHairLength;
+	}
 	/*
 	 * setHairLength
 	 * Sets the length of the Dog's hair
@@ -37,27 +43,39 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void getGender() {
+		String getGender = "male" || "female";
+			getGender = mGender;
+			return mGender;
+	}
 	/*
 	 * getGender
 	 * @return this Dog's gender
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setGender() {
+		String setGender = mGender;
+	}
 	/*
 	 * setGender
 	 * Sets this Dog's gender
 	 * @param gender the new gender of the Dog, a String
 	 * @return nothing
 	 */
-	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
+	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void getSize(){
+		String getSize = mSize;
+		return mSize;
+	}
 	/*
 	 * getSize
 	 * @return the size of the dog
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setSize(){
+		String setSize = mSize;
+	}
 	/*
 	 * setSize
 	 * Sets the size of the Dog
@@ -65,13 +83,18 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void getAge(){
+		int getAge = mAge;
+		return mAge;
+	}
 	/*
 	 * getAge
 	 * @return this Dog's age
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setAge() {
+		int setAge = mAge;
+	}
 	/*
 	 * setAge
 	 * Sets the age of the Dog
@@ -79,13 +102,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void getWeight() {
 
+	}
 	/*
 	 * getWeight
 	 * @return this Dog's weight
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void setWeight() {
 
+	}
 	/*
 	 * setWeight
 	 * Sets the weight of the Dog
@@ -93,13 +120,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void getColor() {
 
+	}
 	/*
 	 * getColor
 	 * @return this Dog's color
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void setColor() {
 
+	}
 	/*
 	 * setColor
 	 * Sets the color of the Dog
