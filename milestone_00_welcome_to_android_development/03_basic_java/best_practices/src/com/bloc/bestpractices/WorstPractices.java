@@ -8,11 +8,11 @@ public class WorstPractices extends Object {
 // EDIT BELOW
 
 	public static void main(String [] args) {
-		int magicNumber = WorstPractices.animals(false);
-		magicNumber *= 5;
-		if (magicNumber > 18) {
-			while(magicNumber > 0){
-				magicNumber--;
+		int number = WorstPractices.animals(false);
+		number*= 5;
+		if (number > 18) {
+			while(number > 0){
+				number--;
 			}
 		}
 	}
