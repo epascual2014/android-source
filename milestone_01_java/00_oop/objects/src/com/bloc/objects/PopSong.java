@@ -10,7 +10,13 @@ class PopSong extends Song {
 	 *				 year and weeks on billboard
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+	Posong(String ensemble, String title, int year, int mWeeksOnBillboard){
+		this.ensemble = ensemble;
+		this.title = title;
+		this.year = year;
+		this.mWeeksOnBillboard = mweeksOnBillBoard;
+		
+	}
 	/*
 	 * Partial Constructor
 	 * Side-effects: Sets the year of release to 0
@@ -18,7 +24,9 @@ class PopSong extends Song {
 	 * @param title the song title
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+	Popsong(){
+		
+	}
 	/*
 	 * Full Song Constructor
 	 * Side-effects: Sets the weeks on billboard to 0
@@ -27,6 +35,9 @@ class PopSong extends Song {
 	 * @param yearReleased the year the song was released
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+	Popsong(){
+		
+	}
 
 	/*
 	 * Full PopSong Constructor
@@ -37,4 +48,7 @@ class PopSong extends Song {
 	 *		  				   Billboard's top 100
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+	Popsong(){
+		
+	}
 }
