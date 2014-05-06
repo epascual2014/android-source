@@ -197,5 +197,8 @@ class Dog {
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void cutHair() {
 		mHairLength = mHairLength - HAIR_CUT_LENGTH;
+		if (mHairLength < 0f){
+			mHairlength = 0f;
+		}
 	}
 }
