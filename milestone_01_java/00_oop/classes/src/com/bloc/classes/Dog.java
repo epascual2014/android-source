@@ -171,8 +171,8 @@ class Dog {
 	/*
 	 * play
 	 * Side-effect: 1. The Dog loses weight, specifically WEIGHT_LOSS
-	 *				2. Every 6 play invocations, the Dog shrinks to a smaller *                 size, if possible
-	 *				i.e. "large" (6 plays later->) "average" (6 plays later->) *                   "small" -> "tiny"
+	 *				2. Every 6 play invocations, the Dog shrinks to a smaller *          size, if possible
+	 *				i.e. "large" (6 plays later->) "average" (6 plays later->) *         "small" -> "tiny"
      *              3. The Dog cannot shrink to a weight smaller than *                 MIN_WEIGHT
 	 * @return nothing
 	 */
@@ -184,7 +184,9 @@ class Dog {
 			if (mSize.equals ("large")) {
 					mSize = "average"; 
 			} else if (mSize.equals("average")) {
-					mSize = "smaller";
+					mSize = "small";
+			} else if (mSize.equals("small")) {
+				mSize = "tiny";
 			}
 		} 
 	}
@@ -198,7 +200,7 @@ class Dog {
 	void cutHair() {
 		mHairLength = mHairLength - HAIR_CUT_LENGTH;
 		if (mHairLength < 0f){
-			mHairlength = 0f;
+			mHairLength = 0f;
 		}
 	}
 }
