@@ -57,7 +57,7 @@ public class Methods extends Object {
 	public int[] getMinAndMax(int[] someNumbers) {
 		
 		int smallNumber = someNumbers[0]; // set which element in the array will be the smallest number
-		int highNumber = someNumbers[1]; // set which element in the array will be the highest number
+		int highNumber = someNumbers[0]; // set which element in the array will be the highest number
 		for (int i = 0; i < someNumbers.length; i++) {
 			if ( someNumbers[i] >= highNumber) {
 				highNumber = someNumbers[i]; 
@@ -69,7 +69,7 @@ public class Methods extends Object {
 		/*
 		 * ASSIGNMENT:
 		 * This method returns an array of length 2, the 0th index should contain
-		 * the smallest number from withing someNumbers and the 1st index must
+		 * the smallest number from within someNumbers and the 1st index must
 		 * be the largest e.g.
 		 * {3, 6, 202, 2, 9986, 5} returns {2, 9986}
 		 */
