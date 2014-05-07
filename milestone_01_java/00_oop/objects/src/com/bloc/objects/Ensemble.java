@@ -14,7 +14,7 @@ class Ensemble extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Ensemble(){
-		Artist[] mArtists = new Artist[];
+		Artist[] mArtists = new mArtists[0];
 	}
 
 	/*
@@ -28,7 +28,8 @@ class Ensemble extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Ensemble(String mName, Artist[] mArtists){
-		this.mName = 'firstname' + 'lastname';
-		this.Artist[] mArtists = mArtists[];
+		this.mName = mFirstName + mLastName;
+		this.mArtists[i] = mArtists[i];
+		
 	}
 }
