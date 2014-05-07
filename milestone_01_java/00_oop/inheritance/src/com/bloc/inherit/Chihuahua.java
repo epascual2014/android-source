@@ -3,12 +3,13 @@ package com.bloc.inherit;
 // CLASS DEFINITION GOES HERE
 // Chihuahuas have a high metabolism, they only grow to a new size after being fed 5 times
 class Chihuahua extends Dog {
-	@override
+	@Override
 	void feed(){
-		dogMeal = dogMeal + 1; // or dogMeal++
-		if (dogMeal % 5 == 0){ 
-			// dog grows into new size
+		mWeight += WEIGHT_GAINED_FROM_FEEDING;
+		// Pre-increment feed counter
+		if (++mFeedCounter == 5) {
+			changeSize(true);
+			mFeedCounter = 0;
 		}
-			
 	}
 }
