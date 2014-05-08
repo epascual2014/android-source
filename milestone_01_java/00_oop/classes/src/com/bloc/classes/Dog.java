@@ -5,11 +5,11 @@ class Dog {
     final float HAIR_CUT_LENGTH = 0.15f;
     // Minimum weight that any Dog can be
     final float MIN_WEIGHT = 1.25f; // the minimum weight
-		// Amount of weight to gain after eating
-		final float WEIGHT_GAIN = 0.25f;
-		// Amount of weight to lose after playing
-		final float WEIGHT_LOSS = 0.2f;
-		// Hair length
+	// Amount of weight to gain after eating
+	final float WEIGHT_GAIN = 0.25f;
+	// Amount of weight to lose after playing
+	final float WEIGHT_LOSS = 0.2f;
+	// Hair length
 	float mHairLength;
 	// Gender, either "male" or "female"
 	String mGender;
@@ -31,7 +31,7 @@ class Dog {
 	 * @return this Dog's hair length
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-		void getHairLength() {
+		float getHairLength() {	
 		return mHairLength;
 	}
 	/*
@@ -50,8 +50,8 @@ class Dog {
 	 * @return this Dog's gender
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-	void getGender() {
-			return mGender;
+	String getGender() {
+		return mGender;
 	}
 	/*
 	 * setGender
@@ -69,7 +69,7 @@ class Dog {
 	 * @return the size of the dog
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-	void getSize(){
+	String getSize(){
 		return mSize;
 	}
 	/*
@@ -80,7 +80,7 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
-	void setSize( String dogSize){
+	void setSize(String dogSize){
 		mSize = dogSize;
 	}
 	/*
@@ -89,7 +89,7 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
-	void getAge(){
+	int getAge(){
 		return mAge;
 	}
 	/*
@@ -109,7 +109,7 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 
-	void getWeight() {
+	float getWeight() {
 		return mWeight;
 
 	}
@@ -130,7 +130,7 @@ class Dog {
 	 * @return this Dog's color
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-	void getColor() {
+	String getColor() {
 		return mColor;
 	}
 	/*
@@ -178,7 +178,7 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void play(){
-		mWeight = mWeight - WEIGHT_LOSS; //decreased weight
+		mWeight = getWeight - WEIGHT_LOSS; //decreased weight
 		dogPlay = dogPlay++;
 		if (dogPlay % 6 == 0){
 			if (mSize.equals ("large")) {
