@@ -171,15 +171,15 @@ class Dog {
 	/*
 	 * play
 	 * Side-effect: 1. The Dog loses weight, specifically WEIGHT_LOSS
-	 *				2. Every 6 play invocations, the Dog shrinks to a smaller *          size, if possible
-	 *				i.e. "large" (6 plays later->) "average" (6 plays later->) *         "small" -> "tiny"
-     *              3. The Dog cannot shrink to a weight smaller than *                 MIN_WEIGHT
+	 *				2. Every 6 play invocations, the Dog shrinks to a smaller * size, if possible
+	 *				i.e. "large" (6 plays later->) "average" (6 plays later->) * "small" -> "tiny"
+     *              3. The Dog cannot shrink to a weight smaller than * MIN_WEIGHT
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void play(){
-		mWeight = getWeight - WEIGHT_LOSS; //decreased weight
-		dogPlay = dogPlay++;
+		mWeight = mWeight - WEIGHT_LOSS; //decreased weight
+		++dogPlay;
 		if (dogPlay % 6 == 0){
 			if (mSize.equals ("large")) {
 					mSize = "average"; 
@@ -187,8 +187,12 @@ class Dog {
 					mSize = "small";
 			} else if (mSize.equals("small")) {
 				mSize = "tiny";
-			}
+			}	
 		} 
+		if (mWeight < MIN_WEIGHT){
+			mWeight = MIN_WEIGHT;
+		}
+			
 	}
 	/*
 	 * cutHair
