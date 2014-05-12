@@ -13,8 +13,9 @@ class Ensemble extends Object {
 	 * @param artists variable length artists
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	Ensemble(Artist[] mArtist){
-		this.mArtists = mArtist;
+	Ensemble(Artist[] mArtists){
+		this.mName = "Kurt Cobain";
+		this.mArtists = mArtists;
 	}
 
 	/*
@@ -29,7 +30,7 @@ class Ensemble extends Object {
 	// CONSTRUCTOR CODE GOES HERE
 	Ensemble(String mName, Artist[] mArtists){
 		if (mName == null){
-			this.mName = mArtist[0].mFirstName + mArtist[0].mLastName;
+			this.mName = mArtists[0].mFirstName + mArtists[0].mLastName;
 		} else {
 			this.mName = mName;
 		}
