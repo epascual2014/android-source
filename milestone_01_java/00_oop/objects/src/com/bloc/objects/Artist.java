@@ -12,8 +12,8 @@ class Artist extends Object {
 	 * @param lastName
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	Artist(String mFirstName, String mLastName){
-		this.mFirstName = firstname;
-		this.mLastName = lastname;
+	Artist(String firstName, String lastName){
+		mFirstName = firstname;
+		mLastName = lastname;
 	}
 }

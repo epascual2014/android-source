@@ -10,24 +10,20 @@ class PopSong extends Song {
 	 *				 year and weeks on billboard
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	Popsong(){
-		String ensemble = ensemble;
-		String title = title;
-		int year = year;
-		int mWeeksOnBillboard = mWeeksOnBillboard;
+	Popsong(){ 
+		super();
+		this.mWeeksOnBillboard = 6;
 	}
 	/*
 	 * Partial Constructor
 	 * Side-effects: Sets the year of release to 0
 	 * @param ensemble the ensemble responsible
-	 * @param title the song title
+	 * @param title the song title 
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	Popsong(){
-		this.year = 0;
-		this.ensemble = ensemble;
-		this.title = title;
-		this.song = song;
+	 Popsong(Ensemble mEnsemble, String title){
+		super(mEnsemble,title);
+		this.mWeeksOnBillboard = 6;
 	}
 	/*
 	 * Full Song Constructor
@@ -37,7 +33,10 @@ class PopSong extends Song {
 	 * @param yearReleased the year the song was released
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+	Popsong(Ensemble mEnsemble, String title, int year){
+		super(mEnsemble, title, year);
+		this.mWeeksOnBillboard = 6;
+	}
 	/*
 	 * Full PopSong Constructor
 	 * @param ensemble the ensemble responsible
@@ -47,5 +46,9 @@ class PopSong extends Song {
 	 *		  				   Billboard's top 100
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+	Popsong(Ensemble mEnsemble, String title, int year, int weeksOnBillboard){
+		super(mEnsemble, title, year);
+		this.mWeeksOnBillboard = weeksOnBillboard;
+	}
 
 }
