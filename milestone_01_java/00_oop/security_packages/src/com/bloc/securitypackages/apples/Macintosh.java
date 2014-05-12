@@ -1,6 +1,6 @@
 package com.bloc.securitypackage.apples;
 
-class Macintosh extends Apple {
+public class Macintosh extends Apple {
 
 	Macintosh() {
 		super(Macintosh.class.getSimpleName(), 200, new Red(), 0.14d);
