@@ -80,19 +80,13 @@ public abstract class Person extends Object {
 	/*
 	 * Abstract void
 	 methods
-	 */
+	 
 	
-	public abstract void getInCar();{
-		
-	}
+	public abstract void getInCar();
 
-	public abstract void startEngine();{
-		
-	}
+	public abstract void startEngine();
 
-	public abstract void driveFast();{
-		
-	}
+	public abstract void driveFast();
 
 	public abstract void getInPlane();
 
@@ -104,5 +98,5 @@ public abstract class Person extends Object {
 
 	public abstract void findAPartner();
 
-	public abstract void salsa();
+	public abstract void salsa();*/
 }
