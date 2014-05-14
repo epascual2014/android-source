@@ -2,9 +2,18 @@ package com.bloc.securitypackages;
 
 // YOUR IMPORTS GO HERE
 // import com.bloc.{your_package};
-import com.bloc.apples;
-import com.bloc.colors;
-import com.bloc.citrus;
+import com.bloc.securitypackages.color.LimeGreen;
+import com.bloc.securitypackages.color.OrangeColor;
+import com.bloc.securitypackages.color.OrangeRed;
+import com.bloc.securitypackages.color.Red;
+import com.bloc.securitypackages.fruits.Apple;
+import com.bloc.securitypackages.fruits.Macintosh;
+import com.bloc.securitypackages.fruits.citrus.Grapefruit;
+import com.bloc.securitypackages.fruits.citrus.Green;
+import com.bloc.securitypackages.fruits.citrus.Orange;
+import com.bloc.securitypackages.Color;
+import com.bloc.securitypackages.Fruit;
+
 
 public class Main extends Object {
 
@@ -20,7 +29,7 @@ public class Main extends Object {
 		colors[0] = fruits[1].getColor();
 		colors[0] = fruits[2].getColor();
 		colors[0] = fruits[3].getColor();
-		colors[4] = new OrangeColor();
+		colors[4] = new Orange();
 
 		
 		System.out.println("/************************/");
