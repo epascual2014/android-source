@@ -1,9 +1,9 @@
 package com.bloc.generics.things;
 
-public class Thing extends Object {
-	private String mName;
+public class Thing <T>extends Object {
+	private T mName;
 
-	public Thing(String name) {
+	public Thing(T name) {
 		mName = name;
 	}
 }

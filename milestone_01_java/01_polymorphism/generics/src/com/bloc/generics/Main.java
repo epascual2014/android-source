@@ -10,6 +10,13 @@ public class Main extends Object {
 		 * Put a bunch of Toys in the toybox!
 		 */
 		ToyBox toyBox = new ToyBox();
+		Toy<String> newToy = new Toy<String>("Toy");
+		Toy<Spoon> spoonToy = new Toy<Spoon>(new Spoon());
+		toyBox.addToy(newToy);
+		toyBox.addToy(spoonToy);
+	
+		
+		
 
 		if (toyBox.getToyCount() == 0) {
 			System.out.println("Let's get some toys in that box!");
