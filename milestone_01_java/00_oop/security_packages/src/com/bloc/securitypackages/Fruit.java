@@ -1,5 +1,7 @@
 package com.bloc.securitypackages;
 
+import com.bloc.securitypackages.Color;
+
 public abstract class Fruit extends Object {
 	// The name of the fruit
 	private String mName;
@@ -46,7 +48,7 @@ public abstract class Fruit extends Object {
 		return mCalories;
 	}
 
-	public int setCalories(int calories) {
+	public void setCalories(int calories) {
 		mCalories = calories;
 	}
 

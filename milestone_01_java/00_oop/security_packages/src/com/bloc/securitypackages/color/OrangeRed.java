@@ -1,7 +1,9 @@
 package com.bloc.securitypackages.color;
 
+import com.bloc.securitypackages.Color;
+
 public class OrangeRed extends Color {
-	OrangeRed() {
+	public OrangeRed() {
 		super(OrangeRed.class.getSimpleName(), 255, 69, 0);
 	}
 }
