@@ -131,16 +131,20 @@ public class MyArrayList<E> extends Object implements List<E> {
 
 	@Override
 	public E remove(int index) {
-		Object[] temp = new Object[mList.length + 1];  // create the new array into temp.
-		for (int i = 0, j = 0; j < temp.length; --i, --j){  // loop into the array by comparing the first array to the second array's index i&j
+		if (index < 0 || index >= mList.length){   
+			throw new IndexOutOfBoundsException();  // check if index is ok.
+		}
+		Object oldValue = mList[index];
+		Object[] temp = new Object[mList.length - 1];  // create the new array into temp.
+		for (int i = 0, j = 0; i < mList.length; ++i, ++j){  // loop into the array by comparing the first array to the second array's index i&j
 			if ( i == index ) {  // check if i is valid
-				++i; // increment original array to cancel out j temp array
+				--j; // increment original array to cancel out j temp array
 			} else {
 				temp[j] = mList[i]; // 
 			}
 		}
 		mList = temp;
-		return null;
+		return (E)oldValue;
 	}
 
 	@Override
@@ -148,10 +152,11 @@ public class MyArrayList<E> extends Object implements List<E> {
 		 // YOUR WORK HERE
 		for (int i = 0; i < mList.length; ++i){ // loop around the index
 			if (mList[i].equals(o)){ // if found o return true
-
+				this.remove(i);
+				return true; // if found return true
 			}
-		} // YOUR WORK HERE  two variables i and j
-		return true;
+		}
+		return false; // else false
 	}
 	
 
@@ -165,18 +170,19 @@ public class MyArrayList<E> extends Object implements List<E> {
 		return false;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public E set(int index, E element) {
 		// YOUR WORK HERE
-		return null;
+		Object oldValue = mList[index]; // which array value is stored
+		mList[index] = element;
+		return (E)oldValue;
 	}
 
 	@Override
 	public int size() {
-		for (int i = 0; i < mList.length; ++i){
-			mList[i] = size();// YOUR WORK HERE
-		}
-			return size();
+		// YOUR WORK HERE
+		return mList.length;
 	}
 
 	@Override
