@@ -79,6 +79,7 @@ public class MyArrayList<E> extends Object implements List<E> {
 		return false;
 	}
 
+	@SuppressWarnings({ "unchecked", "unused" })
 	@Override
 	public E get(int index) {
 		for (int i = 0; i < mList.length; ++i)// YOUR WORK HERE
@@ -129,6 +130,7 @@ public class MyArrayList<E> extends Object implements List<E> {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public E remove(int index) {
 		if (index < 0 || index >= mList.length){   
