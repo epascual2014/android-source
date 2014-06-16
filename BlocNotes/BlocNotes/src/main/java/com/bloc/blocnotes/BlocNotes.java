@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class BlocNotes extends Activity
@@ -46,7 +48,7 @@ public class BlocNotes extends Activity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, NoteFragment.newInstance(position + 1))
                 .commit();
     }
 
@@ -127,6 +129,7 @@ public class BlocNotes extends Activity
             return fragment;
         }
 
+
         public NoteFragment() {
         }
 
@@ -134,7 +137,9 @@ public class BlocNotes extends Activity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_bloc_notes, container, false);
+            EditText editText = (EditText) rootView.findViewById(R.id.edit_text_note_fragment);
             return rootView;
+
         }
 
         @Override
@@ -142,7 +147,9 @@ public class BlocNotes extends Activity
             super.onAttach(activity);
             ((BlocNotes) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
+            Toast.makeText(activity, "It's working!", Toast.LENGTH_LONG).show();
         }
+
     }
 
 }
