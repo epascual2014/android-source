@@ -107,7 +107,8 @@ public class BlocNotes extends Activity
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class NoteFragment extends Fragment {
+
         /**
          * The fragment argument representing the section number for this
          * fragment.
@@ -118,15 +119,15 @@ public class BlocNotes extends Activity
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
+        public static NoteFragment newInstance(int sectionNumber) {
+            NoteFragment fragment = new NoteFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
         }
 
-        public PlaceholderFragment() {
+        public NoteFragment() {
         }
 
         @Override
