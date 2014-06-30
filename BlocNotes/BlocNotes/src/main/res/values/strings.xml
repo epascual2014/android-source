@@ -3,13 +3,14 @@
 
     <string name="app_name">BlocNotes</string>
     <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="title_section4">Section 4</string>
+    <string name="title_section2">Second look</string>
+    <string name="title_section3">This one</string>
+    <string name="title_section4">Again and again</string>
     <string name="title_section5">Section 5</string>
+    <string name="title_section6">Add Notebook 5</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
+    <string name="action_example">Test Menu</string>
     <string name="action_settings">Settings</string>
 
 </resources>

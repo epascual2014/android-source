@@ -27,6 +27,8 @@ public class BlocNotes extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    private String myEdit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +43,41 @@ public class BlocNotes extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
+        NoteFragment noteFragment = (NoteFragment) fragmentManager.findFragmentById(R.id.container);
+        if (noteFragment == null) {
+            noteFragment = NoteFragment.newInstance(0);
+            fragmentManager.beginTransaction().
+                    replace(R.id.container, noteFragment).commit();
+        }
+
+        if (savedInstanceState != null) {
+            savedInstanceState.getString("mEdit", myEdit);
+            return;
+        }
+
+
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        Toast.makeText(getApplicationContext(), "hi there", Toast.LENGTH_SHORT).show();
+     }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
+        FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
+        fragmentManager.beginTransaction() //start of the transaction
                 .replace(R.id.container, NoteFragment.newInstance(position + 1))
                 .commit();
     }
@@ -68,6 +98,9 @@ public class BlocNotes extends Activity
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_section6);
                 break;
 
         }
@@ -106,6 +139,7 @@ public class BlocNotes extends Activity
         return super.onOptionsItemSelected(item);
     }
 
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -121,6 +155,12 @@ public class BlocNotes extends Activity
          * Returns a new instance of this fragment for the given section
          * number.
          */
+
+        private static final String EDIT_TEXT = "My_Edit_Text";
+
+        private EditText mEditText;
+
+
         public static NoteFragment newInstance(int sectionNumber) {
             NoteFragment fragment = new NoteFragment();
             Bundle args = new Bundle();
@@ -133,14 +173,45 @@ public class BlocNotes extends Activity
         public NoteFragment() {
         }
 
+
+        @Override
+        public void onActivityCreated(Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+
+            if (savedInstanceState != null){
+                String myEdit = savedInstanceState.getString(EDIT_TEXT); // Data type String (myEdit) is where we store the string EDIT TEXT.
+                mEditText.setText(myEdit);  //  here we call the saved text myEDIT.
+                Toast.makeText(getActivity(), myEdit, Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
+           /* FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
+            fragmentManager.beginTransaction() //start of the transaction
+                    .replace(R.id.container, NoteFragment.newInstance(position + ))
+                    .commit();*/
             View rootView = inflater.inflate(R.layout.fragment_bloc_notes, container, false);
-            EditText editText = (EditText) rootView.findViewById(R.id.edit_text_note_fragment);
-            return rootView;
 
+
+            mEditText = (EditText) rootView.findViewById(R.id.edit_text_note_fragment);
+
+
+            return rootView;
         }
+
+
+
+        @Override
+        public void onSaveInstanceState(Bundle savedInstanceState){
+            super.onSaveInstanceState(savedInstanceState);
+            savedInstanceState.putString(EDIT_TEXT, mEditText.getText().toString());// Saving the string in a value that will be return
+            Toast.makeText(getActivity(), "try it", Toast.LENGTH_SHORT).show();
+        }
+
 
         @Override
         public void onAttach(Activity activity) {
@@ -149,6 +220,9 @@ public class BlocNotes extends Activity
                     getArguments().getInt(ARG_SECTION_NUMBER));
             Toast.makeText(activity, "It's working!", Toast.LENGTH_LONG).show();
         }
+
+
+
 
     }
 
