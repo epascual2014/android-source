@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class BlocNotes extends Activity
@@ -22,12 +24,19 @@ public class BlocNotes extends Activity
      */
     private CharSequence mTitle;
     private String mEdit;
+    TextView tv;
+    Button btn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloc_notes);
+
+        btn = (Button) findViewById(R.id.eraseButton);
+        tv = (TextView) findViewById(R.id.my_edit_text_note_fragment);
+
+
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -44,7 +53,7 @@ public class BlocNotes extends Activity
 
 
         if (noteFragment == null)
-            //created notefragment
+            //created note fragment
         {
             noteFragment = NoteFragment.newInstance(0);
 

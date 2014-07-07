@@ -10,8 +10,19 @@
     <EditText
         android:id="@+id/my_edit_text_note_fragment"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:background="#FF0000" />
+        android:layout_height="200px"
+        android:background="#ffdbff9a" />
+
+
+    <Button
+        android:id="@+id/eraseButton"
+        android:layout_height="wrap_content"
+        android:layout_width="150px"
+        android:layout_alignBaseline="@+id/my_edit_text_note_fragment"
+        android:layout_alignBottom="@+id/my_edit_text_note_fragment"
+        android:layout_toRightOf="@+id/my_edit_text_note_fragment"
+        android:text="Button"/>
+
 
 
 </RelativeLayout>

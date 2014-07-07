@@ -7,10 +7,11 @@
     <string name="title_section3">This one</string>
     <string name="title_section4">Again and again</string>
     <string name="title_section5">Section 5</string>
-    <string name="title_section6">Add Notebook 5</string>
+    <string name="title_section6">Add Notebook</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Test Menu</string>
     <string name="action_settings">Settings</string>
+    <string name="action_erase">Erase</string>
+    <string name="action_add">Add Note</string>
 
 </resources>
