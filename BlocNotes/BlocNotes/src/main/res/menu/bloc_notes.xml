@@ -8,12 +8,6 @@
         android:orderInCategory="100"
         android:showAsAction="never" />
 
-    <item android:id="@+id/action_add"
-        android:icon="@drawable/ic_menu_add"
-        android:title="@string/action_add"
-        android:orderInCategory="100"
-        android:showAsAction="withText|ifRoom" />
-
     <item android:id="@+id/action_erase"
         android:icon="@drawable/ic_notification_clear_all"
         android:title="@string/action_erase"

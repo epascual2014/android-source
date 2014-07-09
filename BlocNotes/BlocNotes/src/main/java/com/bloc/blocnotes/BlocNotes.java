@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class BlocNotes extends Activity
@@ -33,9 +34,6 @@ public class BlocNotes extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloc_notes);
 
-        btn = (Button) findViewById(R.id.eraseButton);
-        tv = (TextView) findViewById(R.id.my_edit_text_note_fragment);
-
 
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
@@ -51,9 +49,8 @@ public class BlocNotes extends Activity
         NoteFragment noteFragment = (NoteFragment) fragmentManager.findFragmentByTag("noteFrag");
 
 
-
         if (noteFragment == null)
-            //created note fragment
+        //created note fragment
         {
             noteFragment = NoteFragment.newInstance(0);
 
@@ -69,10 +66,11 @@ public class BlocNotes extends Activity
 
     }
 
+
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-       // Toast.makeText(getApplicationContext(), "hi there", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(getApplicationContext(), "hi there", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -144,8 +142,15 @@ public class BlocNotes extends Activity
         if (id == R.id.action_settings) {
             return true;
         }
-        return super.onOptionsItemSelected(item);
+        if (id == R.id.action_add) {
+            Toast.makeText(getApplicationContext(), "Coming Soon!.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        if (id == R.id.action_erase) {
+            //Delete inside edit text notes
+            return true;
+        }
+            return super.onOptionsItemSelected(item);
+        }
     }
-
-
-}
