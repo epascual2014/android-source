@@ -34,8 +34,6 @@ public class BlocNotes extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloc_notes);
 
-
-
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -151,6 +149,15 @@ public class BlocNotes extends Activity
             //Delete inside edit text notes
             return true;
         }
-            return super.onOptionsItemSelected(item);
+
+        if (id == R.id.action_menu_view) {
+            CustomStyleDialogFragment newFragment = new CustomStyleDialogFragment();
+            newFragment.show(getFragmentManager(),null);
+
+            return true;
         }
-    }
+        return super.onOptionsItemSelected(item);
+     }
+
+
+ }
