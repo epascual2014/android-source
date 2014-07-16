@@ -14,5 +14,9 @@
     <string name="action_erase">Erase</string>
     <string name="action_add">Add Note</string>
     <string name="action_view">View Options</string>
+    <string name="select_font">System Font</string>
+    <string name="spinner_title">System Font</string>
+
+
 
 </resources>

@@ -7,9 +7,16 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class BlocNotes extends Activity
@@ -19,14 +26,17 @@ public class BlocNotes extends Activity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
+    private Spinner spinner1, spinner2;
+    private Button btnSubmit;
+
+    String [] fonts_array;
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
     private String mEdit;
-    TextView tv;
-    Button btn;
+
 
 
     @Override
@@ -38,10 +48,35 @@ public class BlocNotes extends Activity
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
-        // Set up the drawer.
-        mNavigationDrawerFragment.setUp(
-                R.id.navigation_drawer,
-                (DrawerLayout) findViewById(R.id.drawer_layout));
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.fonts, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                int index = arg0.getSelectedItemPosition();
+
+                // storing string resources into Array
+                fonts_array = getResources().getStringArray(R.array.fonts);
+
+            }
+
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // do nothing
+            }
+
+        });
+
+
+
+                    // Set up the drawer.
+                    mNavigationDrawerFragment.setUp(
+                            R.id.navigation_drawer,
+                            (DrawerLayout) findViewById(R.id.drawer_layout));
 
         FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
         NoteFragment noteFragment = (NoteFragment) fragmentManager.findFragmentByTag("noteFrag");
@@ -151,8 +186,9 @@ public class BlocNotes extends Activity
         }
 
         if (id == R.id.action_menu_view) {
-            CustomStyleDialogFragment newFragment = new CustomStyleDialogFragment();
+            CustomOnItemSelectedListener newFragment = new CustomOnItemSelectedListener();
             newFragment.show(getFragmentManager(),null);
+
 
             return true;
         }

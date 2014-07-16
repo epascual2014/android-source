@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/text"
-        android:text="textview"
+        android:text="Customize Fonts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -16,7 +16,7 @@
     <Button
         android:id="@+id/show"
         android:layout_height="wrap_content"
-        android:layout_width="150px"
+        android:layout_width="250px"
         android:layout_alignBaseline="@+id/my_note_fragment"
         android:layout_alignBottom="@+id/my_note_fragment"
         android:layout_toRightOf="@+id/my_note_fragment"
@@ -24,7 +24,7 @@
 
 
     <Spinner
-        android:id="@+id/spinner_locations"
+        android:id="@+id/spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
