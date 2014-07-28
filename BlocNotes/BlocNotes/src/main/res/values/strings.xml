@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">BlocNotes</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Second look</string>
-    <string name="title_section3">This one</string>
-    <string name="title_section4">Again and again</string>
-    <string name="title_section5">Section 5</string>
-    <string name="title_section6">Section 8</string>
+    <string name="app_name">IOWEYOU</string>
+    <string name="title_section1">Profile</string>
+    <string name="title_section2">History</string>
+    <string name="title_section3">Invite Friends</string>
+    <string name="title_section4">Send I OWE YOU</string>
+    <string name="title_section5">Exit</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
@@ -15,7 +15,7 @@
     <string name="action_add">Add Note</string>
     <string name="action_view">View Options</string>
     <string name="select_font">System Font</string>
-    <string name="spinner_title">System Font</string>
+
 
 
 

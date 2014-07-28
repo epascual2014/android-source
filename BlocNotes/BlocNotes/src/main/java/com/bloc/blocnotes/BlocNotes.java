@@ -7,16 +7,8 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class BlocNotes extends Activity
@@ -26,10 +18,7 @@ public class BlocNotes extends Activity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-    private Spinner spinner1, spinner2;
-    private Button btnSubmit;
 
-    String [] fonts_array;
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -48,35 +37,11 @@ public class BlocNotes extends Activity
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.fonts, android.R.layout.simple_spinner_item);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                int index = arg0.getSelectedItemPosition();
-
-                // storing string resources into Array
-                fonts_array = getResources().getStringArray(R.array.fonts);
-
-            }
-
-            public void onNothingSelected(AdapterView<?> arg0) {
-                // do nothing
-            }
-
-        });
-
-
-
-                    // Set up the drawer.
-                    mNavigationDrawerFragment.setUp(
-                            R.id.navigation_drawer,
-                            (DrawerLayout) findViewById(R.id.drawer_layout));
+        // Set up the drawer.
+        mNavigationDrawerFragment.setUp(
+                R.id.navigation_drawer,
+                (DrawerLayout) findViewById(R.id.drawer_layout));
 
         FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
         NoteFragment noteFragment = (NoteFragment) fragmentManager.findFragmentByTag("noteFrag");
@@ -95,7 +60,6 @@ public class BlocNotes extends Activity
             savedInstanceState.getString("mEdit", mEdit);
             return;
         }
-
 
     }
 
@@ -138,9 +102,7 @@ public class BlocNotes extends Activity
             case 5:
                 mTitle = getString(R.string.title_section5);
                 break;
-            case 6:
-                mTitle = getString(R.string.title_section6);
-                break;
+
 
         }
     }
@@ -173,22 +135,25 @@ public class BlocNotes extends Activity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            Toast.makeText(getApplicationContext(), "Settings clicked", Toast.LENGTH_SHORT).show();
             return true;
         }
         if (id == R.id.action_add) {
-            Toast.makeText(getApplicationContext(), "Coming Soon!.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "ADD an I OWE YOU!", Toast.LENGTH_SHORT).show();
             return true;
         }
 
         if (id == R.id.action_erase) {
+            Toast.makeText(getApplicationContext(), "Exit.", Toast.LENGTH_SHORT).show();
             //Delete inside edit text notes
             return true;
         }
 
-        if (id == R.id.action_menu_view) {
-            CustomOnItemSelectedListener newFragment = new CustomOnItemSelectedListener();
-            newFragment.show(getFragmentManager(),null);
 
+        if (id == R.id.action_menu_view) {
+            CustomStyleDialogFragment newFragment = new CustomStyleDialogFragment();
+            newFragment.show(getFragmentManager(),null);
+            Toast.makeText(getApplicationContext(), "Font settings clicked", Toast.LENGTH_SHORT).show();
 
             return true;
         }

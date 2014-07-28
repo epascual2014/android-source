@@ -7,26 +7,26 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text"
-        android:text="Customize Fonts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
-    <Button
-        android:id="@+id/show"
-        android:layout_height="wrap_content"
-        android:layout_width="250px"
-        android:layout_alignBaseline="@+id/my_note_fragment"
-        android:layout_alignBottom="@+id/my_note_fragment"
-        android:layout_toRightOf="@+id/my_note_fragment"
-        android:text="Button"/>
-
-
-    <Spinner
-        android:id="@+id/spinner"
+        style="@style/AppTheme"
+        android:text="Select Font:"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/>
+
+    <TextView
+        style="@style/AppTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:fontFamily="san-serif-light"
+        android:text="Light and Italic"/>
+
+
+
+
+
+
+
 
 
 </LinearLayout>
