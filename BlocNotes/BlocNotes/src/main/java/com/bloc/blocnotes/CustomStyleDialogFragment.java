@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -55,12 +54,9 @@ public class CustomStyleDialogFragment extends DialogFragment {
         // Adding listener to button
         fontButtonS.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                fontButtonS.setEnabled(true);
 
 
-                EditText textSmall = (EditText) buttonView.findViewById(R.id.my_note_fragment);
-                String editText = textSmall.getText().toString();
-                textSmall.setText("empty");
+
             }
         });
 

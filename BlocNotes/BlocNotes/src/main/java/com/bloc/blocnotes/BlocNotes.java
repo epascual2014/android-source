@@ -3,10 +3,12 @@ package com.bloc.blocnotes;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -46,6 +48,9 @@ public class BlocNotes extends Activity
         FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
         NoteFragment noteFragment = (NoteFragment) fragmentManager.findFragmentByTag("noteFrag");
 
+        EditText editText = (EditText) findViewById(R.id.my_note_fragment);
+        Typeface type = Typeface.createFromAsset(getAssets(),"fonts/Helvetica_Reg.ttf");
+        editText.setTypeface(Typeface.SANS_SERIF);
 
         if (noteFragment == null)
         //created note fragment
