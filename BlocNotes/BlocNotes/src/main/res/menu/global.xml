@@ -11,9 +11,5 @@
         android:orderInCategory="100"
         android:showAsAction="withText|ifRoom" />
 
-    <item android:id="@+id/action_menu_view"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="@string/action_view"
-        android:orderInCategory="100"
-        android:showAsAction="withText|ifRoom" />
+
 </menu>

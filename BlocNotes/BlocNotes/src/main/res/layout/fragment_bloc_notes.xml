@@ -14,14 +14,11 @@
         android:layout_height="150dp"
         android:background="#ffff7c07" />
 
-
     <TextView
         android:id="@+id/lbl_your_name"
         android:text="Type in box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-
 
 
 </RelativeLayout>

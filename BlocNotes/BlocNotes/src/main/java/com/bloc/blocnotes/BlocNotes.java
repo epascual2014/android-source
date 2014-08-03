@@ -149,7 +149,6 @@ public class BlocNotes extends Activity
             return true;
         }
 
-
         if (id == R.id.action_menu_view) {
             CustomStyleDialogFragment newFragment = new CustomStyleDialogFragment();
             newFragment.show(getFragmentManager(),null);

@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.bloc.blocnotes.BlocNotes" >
 
+
+    <item android:id="@+id/action_menu_view"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="@string/action_view"
+        android:orderInCategory="100"
+        android:showAsAction="withText|ifRoom" />
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
