@@ -54,7 +54,7 @@ public class CustomStyleDialogFragment extends DialogFragment {
         // Adding listener to button
         fontButtonS.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                fontButtonS.setTextSize();
 
 
             }
