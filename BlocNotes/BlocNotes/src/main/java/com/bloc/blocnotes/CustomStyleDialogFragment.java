@@ -58,7 +58,7 @@ public class CustomStyleDialogFragment extends DialogFragment {
                     {
                         // observer pattern interfaces
                         EditText editText = (EditText) getView().findViewById(R.id.my_note_fragment_edit_text);
-                        //editText.setText(R.style.text_small);
+                        editText.setText(R.style.text_small);
 
                     }
 
