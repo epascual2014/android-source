@@ -10,6 +10,12 @@
         <item name="android:typeface">sans</item>
     </style>
 
+    <style name="text_small">
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
 
 
 </resources>

@@ -53,7 +53,7 @@ public class NoteFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_bloc_notes, container, false);
 
 
-        myEditText = (EditText) rootView.findViewById(R.id.my_note_fragment);
+        myEditText = (EditText) rootView.findViewById(R.id.my_note_fragment_edit_text);
         return rootView;
     }
 

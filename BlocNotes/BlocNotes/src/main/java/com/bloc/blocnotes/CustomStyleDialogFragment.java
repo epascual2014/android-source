@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -46,18 +47,25 @@ public class CustomStyleDialogFragment extends DialogFragment {
 
         });
 
-        final View buttonView = inflater.inflate(R.layout.fragment_custom_dialog, container, false);
+        final View buttonView = inflater.inflate(R.layout.fragment_custom_dialog,container, false);
 
         // Creating button var
-        final Button fontButtonS = (Button) buttonView.findViewById(R.id.btn_small);
+        final Button fontButtonS = (Button)buttonView.findViewById(R.id.btn_small);
 
         // Adding listener to button
         fontButtonS.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                fontButtonS.setTextSize();
+                    {
+                        // observer pattern interfaces
+                        EditText editText = (EditText) getView().findViewById(R.id.my_note_fragment_edit_text);
+                        //editText.setText(R.style.text_small);
+
+                    }
 
 
             }
+
+
         });
 
         return rootView;

@@ -48,7 +48,7 @@ public class BlocNotes extends Activity
         FragmentManager fragmentManager = getFragmentManager(); // Calling a FragmentManager to manage Fragments.
         NoteFragment noteFragment = (NoteFragment) fragmentManager.findFragmentByTag("noteFrag");
 
-        EditText editText = (EditText) findViewById(R.id.my_note_fragment);
+        EditText editText = (EditText) findViewById(R.id.my_note_fragment_edit_text);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/Helvetica_Reg.ttf");
         editText.setTypeface(Typeface.SANS_SERIF);
 
