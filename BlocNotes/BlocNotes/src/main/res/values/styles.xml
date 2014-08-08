@@ -10,10 +10,10 @@
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="text_small">
+    <style name="text_small" parent="@android:style/Widget.EditText">
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">30sp</item>
     </style>
 
 

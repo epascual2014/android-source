@@ -16,16 +16,21 @@ import android.widget.Toast;
 /**
  * Created by epascual on 7/9/14.
  */
-public class CustomStyleDialogFragment extends DialogFragment {
+public class CustomStyleDialogFragment extends DialogFragment{
+
 
     private Spinner spinner;
     String[] fonts_array;
+    // Creating button var
+
+    View rootView;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_custom_dialog, container, false);
+        rootView = inflater.inflate(R.layout.fragment_custom_dialog, container, false);
         spinner = (Spinner) rootView.findViewById(R.id.spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.fonts, android.R.layout.simple_spinner_item);
@@ -47,38 +52,33 @@ public class CustomStyleDialogFragment extends DialogFragment {
 
         });
 
-        final View buttonView = inflater.inflate(R.layout.fragment_custom_dialog,container, false);
+        Button buttonSmall = (Button) rootView.findViewById(R.id.btn_small);
+        //Button buttonMedium = (Button) findViewById(R.id.btn_medium);
+        //Button buttonLarge = (Button) getView().findViewById(R.id.btn_large);
 
-        // Creating button var
-        final Button fontButtonS = (Button)buttonView.findViewById(R.id.btn_small);
 
         // Adding listener to button
-        fontButtonS.setOnClickListener(new View.OnClickListener() {
+        buttonSmall.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                    {
-                        // observer pattern interfaces
-                        EditText editText = (EditText) getView().findViewById(R.id.my_note_fragment_edit_text);
-                        editText.setText(R.style.text_small);
 
-                    }
-
-
+                switch (v.getId())
+                {
+                    case R.id.btn_small:
+                        ((EditText)rootView.findViewById(R.id.my_note_fragment_edit_text)).setText("Font smaller");
+                        break;
+                }
             }
 
-
         });
-
-        return rootView;
-
+            return rootView;
     }
+
+
 
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-
-
 
 
     }

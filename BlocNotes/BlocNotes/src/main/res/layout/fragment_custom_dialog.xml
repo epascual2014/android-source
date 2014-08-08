@@ -38,13 +38,15 @@
         android:id="@+id/btn_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medium"/>
+        android:text="Medium"
+        android:background="@drawable/button_default"/>
 
     <Button
         android:id="@+id/btn_large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Large"/>
+        android:text="Large"
+        android:background="@drawable/button_default"/>
 
 
 </LinearLayout>
