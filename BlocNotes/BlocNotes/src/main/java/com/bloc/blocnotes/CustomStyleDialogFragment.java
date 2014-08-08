@@ -57,6 +57,7 @@ public class CustomStyleDialogFragment extends DialogFragment{
         //Button buttonLarge = (Button) getView().findViewById(R.id.btn_large);
 
 
+
         // Adding listener to button
         buttonSmall.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

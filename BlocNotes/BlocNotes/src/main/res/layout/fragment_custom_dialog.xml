@@ -2,8 +2,8 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
     <TextView
         style="@style/AppTheme"
@@ -27,26 +27,35 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"/>
 
-    <Button
+    <RadioButton
         android:id="@+id/btn_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:text="Small"
-        android:background="@drawable/button_default"/>
+        />
 
-    <Button
+    <RadioButton
         android:id="@+id/btn_medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:text="Medium"
-        android:background="@drawable/button_default"/>
+        />
 
-    <Button
+    <RadioButton
         android:id="@+id/btn_large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:text="Large"
-        android:background="@drawable/button_default"/>
+        android:checked="false" />
 
+    <RadioGroup
+        android:id="@+id/rg_attending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    </RadioGroup>
 
 </LinearLayout>
